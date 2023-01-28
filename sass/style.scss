@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
-
-* {
-    margin: 0px;
-    padding: 0px;
-}
-
-a {
-    text-decoration: none;
-}
+@import "reseteo";
 
 .imgnav {
     display: grid;
@@ -15,9 +7,13 @@ a {
     padding-bottom: 18px;
 }
 
+@mixin sizelog ($widht, $height){
+    height: $height;
+    width: $widht;
+}
+
 .sizelogo {
-    width: 50px;
-    height: 50px;
+    @include sizelog (50px, 50px);
 }
 
 body {
@@ -29,6 +25,21 @@ header {
     width: 100%;
     font-family: 'Poppins', sans-serif;
     padding-bottom: 10px;
+    ul {
+        padding: 0rem;
+        li {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 15px;
+            color: rgb(42, 42, 75);
+            a {
+                text-decoration: none;
+            }
+        }
+    }
 }
 
 .descripcion {
@@ -68,10 +79,13 @@ h1 {
     font-family: 'Poppins', sans-serif;
     padding: 20px;
     margin: 5px;
+    font-weight: bold;
 }
 
 h2 {
+    margin-bottom: 20px;
     font-size: 22px;
+    font-weight: bold;
 }
 
 .subtitulo {
@@ -124,25 +138,15 @@ h2 {
     justify-items: center
 }
 
-ul li {
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 15px;
-    color: rgb(42, 42, 75);
-}
-
-ul {
-    padding: 0rem;
-}
-
 .row {
     margin-top: 30px;
     margin-right: 0px;
     margin-bottom: 75px;
     align-items: center;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    display: flex;
+    color: rgb(42, 42, 75);
 }
 
 .imagenes_tamaños {
